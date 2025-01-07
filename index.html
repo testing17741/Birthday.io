@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Hafiz Ahmed Raza Siraji</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 40px 10px;
+            text-transform: uppercase;
+        }
+        header h1 {
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+        }
+        main {
+            padding: 50px 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        main h2 {
+            font-size: 2rem;
+            color: #005f73;
+            margin-bottom: 20px;
+        }
+        main p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .countdown-box {
+            background-color: #005f73;
+            color: white;
+            padding: 20px;
+            font-size: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            animation: zoomIn 1s ease-in-out;
+            flex: 1;
+            min-width: 120px;
+        }
+        .countdown-box span {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.5rem;
+        }
+        .btn {
+            background-color: #ffb703;
+            color: #333;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #d97706;
+            transform: scale(1.1);
+        }
+        footer {
+            background-color: #005f73;
+            color: #fff;
+            padding: 20px 0;
+            font-size: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Mobile-Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            main h2 {
+                font-size: 1.5rem;
+            }
+            .countdown-box {
+                font-size: 1.5rem;
+                padding: 15px;
+            }
+            .countdown-box span {
+                font-size: 1.2rem;
+            }
+            .btn {
+                padding: 12px 20px;
+                font-size: 1rem;
+                width: 90%;
+                max-width: 400px;
+                margin: 20px auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            main h2 {
+                font-size: 1.2rem;
+            }
+            .countdown-box {
+                font-size: 1.2rem;
+                padding: 12px;
+            }
+            .countdown-box span {
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 10px 18px;
+                font-size: 0.9rem;
+                width: 90%;
+                max-width: 350px;
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Happy Birthday Hafiz Ahmed Raza Siraji</h1>
+    </header>
+
+    <main>
+        <h2>Wishing You a Wonderful Year Ahead</h2>
+        <p>On this special day, may you be blessed with all the happiness and success in the world. May Allah guide you towards greater achievements and endless blessings!</p>
+      
+        <h2>Birthday Countdown</h1>
+
+        <div class="countdown-container" id="countdown-container">
+            <div class="countdown-box" id="days">
+                <span>Days</span>
+            </div>
+            <div class="countdown-box" id="hours">
+                <span>Hours</span>
+            </div>
+            <div class="countdown-box" id="minutes">
+                <span>Minutes</span>
+            </div>
+            <div class="countdown-box" id="seconds">
+                <span>Seconds</span>
+            </div>
+        </div>
+
+        <!-- WhatsApp Button: Send Wishes Automatically -->
+        <button class="btn" onclick="sendWishes()">Send Your Wishes on WhatsApp</button>
+    </main>
+
+    <footer>
+        <p>© 2025. Created by Zainuddin Chaudhary.</p>
+    </footer>
+
+    <script>
+        // Countdown Timer Function
+        function updateCountdown() {
+            const eventDate = new Date('January 19, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerHTML = `
+                ${days} <span>Days</span>
+            `;
+            document.getElementById('hours').innerHTML = `
+                ${hours} <span>Hours</span>
+            `;
+            document.getElementById('minutes').innerHTML = `
+                ${minutes} <span>Minutes</span>
+            `;
+            document.getElementById('seconds').innerHTML = `
+                ${seconds} <span>Seconds</span>
+            `;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown-container').innerHTML = '<div class="countdown-box">Happy Birthday!</div>';
+            }
+        }
+
+        // Countdown Interval
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Function to send WhatsApp message automatically
+        function sendWishes() {
+            const phoneNumber = '9152667967'; // Replace with the actual phone number
+            const message = encodeURIComponent('Happy Birthday Hafiz Ahmed Raza Siraji! Wishing you all the best for this special day! 🎉\n\nMessage from Birthday Website: [Insert Website Link Here]\nWebsite created by Zainuddin Chaudhary');
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+
+</body>
+</html>
